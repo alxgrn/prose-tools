@@ -1,5 +1,7 @@
-import { getImageIds } from "./tools";
+import render from './render';
+import { getImageIds } from './tools';
 
 export default {
-    getImageIds
+    render,
+    getImageIds,
 };

@@ -1,11 +1,5 @@
-// Общий тип узла
-type TNode = {
-    type: string;
-    content: TNode[];
-    attrs?: {
-        [name: string]: string;
-    };
-};
+import type { TNode } from "./types";
+
 /**
  * Отдает список всех идентификаторов изображений из документа
  * @param content сериализованный в строку контент в формате prose

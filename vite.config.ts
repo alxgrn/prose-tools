@@ -5,8 +5,12 @@ import { resolve } from "node:path";
 export default defineConfig({
   plugins: [
     dts({
+      include: 'lib',
       rollupTypes: true,
+      insertTypesEntry: true,
+      //copyDtsFiles: true,
       tsconfigPath: "./tsconfig.json",
+      staticImport: true,
     }),
   ],
   build: {
@@ -18,16 +22,5 @@ export default defineConfig({
       formats: ["es", "umd"],
       fileName: (format) => `index.${format}.js`,
     },
-//    rollupOptions: {
-//      external: ["react", "react-dom", "@alxgrn/telefrag-ui"],//"highlight.js"],
-//      output: {
-//        globals: {
-//          "react": "React",
-//          "react-dom": "ReactDOM",
-//          "@alxgrn/telefrag-ui": "@alxgrn/telefrag-ui",
-//          //"highlight.js": "hljs",
-//        },
-//      },
-//    },
   },
 });
