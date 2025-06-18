@@ -1,6 +1,3 @@
-/**
- * Рендер публикации в формате prose
- */
 import doc from './doc';
 import list from './list';
 import list_item from './list_item';
@@ -18,7 +15,12 @@ import table from './table';
 import table_row from './table_row';
 import table_cell from './table_cell';
 import type { TNode } from '../types';
-
+/**
+ * Рендер документа в строку
+ * @param node документ в формате ProseMirror
+ * @param mode формат вывода `html` или `text`
+ * @returns текстовая строка с результатом
+ */
 const render = (node: TNode, mode: 'html'|'text'): string => {
     switch (node.type) {
         case 'doc':
