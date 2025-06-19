@@ -20,7 +20,7 @@ export default defineConfig({
       entry: resolve(__dirname, "lib/index.ts"),
       name: "ProseTools",
       formats: ["es", "umd"],
-      fileName: (format) => `index.${format}.js`,
+      fileName: 'index',
     },
   },
 });
